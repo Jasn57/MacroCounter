@@ -1,12 +1,29 @@
 // Get elements from HTML
-const button = document.getElementById('button');
-const numberSpan = document.getElementById('number');
+const pbutton = document.getElementById('pbutton');
+const fbutton = document.getElementById('fbutton');
+const cbutton = document.getElementById('cbutton');
 
-// set defualt number
-let number = 0;
+const protein = document.getElementById('protein');
+const fats = document.getElementById('fats');
+const carbs = document.getElementById('carbs');
 
-// on click add a number
-button.addEventListener('click', () => {
-  number += 1;
-  numberSpan.textContent = number;
+// Set default numbers
+let proteinCount = 0;
+let fatsCount = 0;
+let carbsCount = 0;
+
+// On click, add a number to each macro
+pbutton.addEventListener('click', () => {
+  proteinCount += 1;
+  protein.textContent = proteinCount;
+});
+
+fbutton.addEventListener('click', () => {
+  fatsCount += 1;
+  fats.textContent = fatsCount;
+});
+
+cbutton.addEventListener('click', () => {
+  carbsCount += 1;
+  carbs.textContent = carbsCount;
 });
