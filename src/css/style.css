@@ -10,7 +10,6 @@ body {
     margin: 0;
 }
 
-/* Title */
 h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
@@ -20,48 +19,43 @@ h1 {
     text-align: center;
 }
 
-/* Buttons */
-.buttons {
+.buttons, .numbers, .norp {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 20px;
 }
 
-button {
+button, #norp {
     border: none;
     color: white;
     padding: 14px 26px;
     border-radius: 12px;
     font-size: 16px;
-    cursor: pointer;
     font-weight: 600;
+    cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
     transition: transform 0.1s ease, opacity 0.2s ease;
-    flex: 1 1 100px; /* Allows them to shrink on small screens */
+    flex: 1 1 100px;
     max-width: 160px;
 }
 
-button:hover {
+button:hover, #norp:hover {
     transform: scale(1.05);
     opacity: 0.9;
 }
 
-/* Button colors */
-#pbutton { background-color: #4CAF50; } /* Protein */
-#fbutton { background-color: #FF9800; } /* Fats */
-#cbutton { background-color: #2196F3; } /* Carbs */
+#pbutton { background-color: #4CAF50; }
+#fbutton { background-color: #FF9800; }
+#cbutton { background-color: #2196F3; }
+#norp { background-color: #9C27B0; }
 
-/* Numbers */
 .numbers {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
     font-size: 2.5rem;
     font-weight: bold;
     margin-top: 20px;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .numbers span {
@@ -73,27 +67,4 @@ button:hover {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.norp {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-}
-
-/* norp button styling */
-#norp {
-    background-color: #9C27B0; /* norp button */
-    color: white;
-    padding: 12px 28px;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-    transition: transform 0.1s ease, opacity 0.2s ease;
-}
-
-#norp:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
+.norp { margin-top: 25px; }
