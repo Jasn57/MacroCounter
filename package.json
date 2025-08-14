@@ -1,9 +1,0 @@
-{
-  "name": "macro-tracker",
-  "version": "1.0.0",
-  "description": "Macro Tracker project",
-  "main": "src/javascript/app.js",
-  "scripts": {},
-  "author": "Jason",
-  "license": "MIT"
-}
