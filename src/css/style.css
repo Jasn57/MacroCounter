@@ -27,7 +27,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-button, #norp {
+button, #aors {
   border: none;
   color: #fff;
   padding: 14px 26px;
@@ -41,12 +41,12 @@ button, #norp {
   max-width: 160px;
 }
 
-button:hover, #norp:hover { transform: scale(1.05); opacity: 0.9; }
+button:hover, #aors:hover { transform: scale(1.05); opacity: 0.9; }
 
 #pbutton { background: #4CAF50; }
 #fbutton { background: #FF9800; }
 #cbutton { background: #2196F3; }
-#norp { background: #9C27B0; margin-top: 25px; }
+#aors { background: #9C27B0; margin-top: 25px; }
 
 .numbers {
   font-size: 2.5rem;
