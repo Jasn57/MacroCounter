@@ -7,15 +7,15 @@ const protein = document.getElementById('protein');
 const fats = document.getElementById('fats');
 const carbs = document.getElementById('carbs');
 
-const norp = document.getElementById('norp');
+const aors = document.getElementById('aors');
 
 // set addition to default
 let isAddition = true; 
 
 // on click toggle between addition and subtraction
-norp.addEventListener('click', () => {
+aors.addEventListener('click', () => {
   isAddition = !isAddition;
-  norp.textContent = isAddition ? '+ | -' : '- | +'; 
+  aors.textContent = isAddition ? '+ | -' : '- | +'; 
 });
 
 // Set default numbers
