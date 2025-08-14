@@ -4,19 +4,25 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Macro Tracker</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="src/css/style.css" />
     </head>
     <body>
+        <h1>Macro Tracker</h1>
         <div class="buttons">
-            <button id="button">Protein</button>
-            <button id="button">Fats</button>
-            <button id="button">Carbs</button>
+            <button id="pbutton">Protein</button>
+            <button id="fbutton">Fats</button>
+            <button id="cbutton">Carbs</button>
         </div>
+    
         <div class="numbers">
             <span id="protein">0</span>
             <span id="fats">0</span>
             <span id="carbs">0</span>
         </div>
-        <script src="app.js"></script>
+
+        <div class="norp">
+            <button id="norp">+ | -</button>
+        </div>
+        <script src="src/javascript/app.js"></script>
     </body>
 </html>
