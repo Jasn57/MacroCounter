@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #181c24 0%, #232b39 100%);
+    color: #e6eaf3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #4fc3f7;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(79,195,247,0.18);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    background: rgba(30, 40, 56, 0.95);
+    border-radius: 18px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(79,195,247,0.10);
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.buttons button, .aors button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #1565c0 0%, #4fc3f7 100%);
+    color: #e6eaf3;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(79,195,247,0.10);
+    transition: transform 0.12s, background 0.2s, box-shadow 0.2s;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.buttons button:hover, .aors button:hover {
+    background: linear-gradient(90deg, #1e88e5 0%, #81d4fa 100%);
+    transform: scale(1.07);
+    box-shadow: 0 6px 24px rgba(79,195,247,0.18);
+}
+
+.numbers span, .button-row span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4fc3f7;
+    text-shadow: 0 2px 8px rgba(79,195,247,0.18);
+    min-width: 2.5rem;
+    text-align: center;
+}
+.aors {
+    margin-bottom: 2.5rem;
+}
+
+.aors button {
+    background: linear-gradient(90deg, #232b39 0%, #1565c0 100%);
+    color: #4fc3f7;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    padding: 0.8rem 2.2rem;
+    box-shadow: 0 4px 16px rgba(79,195,247,0.10);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.aors button:hover {
+    background: linear-gradient(90deg, #1565c0 0%, #4fc3f7 100%);
+    color: #fff;
+}
+
+/* mobile scaling */
+@media (max-width: 600px) {
+    .buttons {
+        padding: 1rem 0.5rem;
+    }
+    .button-row {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .aors button {
+        width: 100%;
+    }
+}
