@@ -5,6 +5,7 @@ A simple web app to track your daily protein, fats, and carbs intake.
 ## Features
 - Increment/decrement macros with buttons
 - Prevents negative values
+- Saves to Local Storage
 
 ## Tech Stack
 - HTML
