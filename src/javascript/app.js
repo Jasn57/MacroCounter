@@ -12,43 +12,10 @@ const aors = document.getElementById('aors');
 // set addition to default
 let isAddition = true; 
 
-let proteinCount = 0;
-let fatsCount = 0;
-let carbsCount = 0;
-
-// load counts from backend
-async function loadCounts() {
-  try {
-    const res = await fetch('http://localhost:3000/api/macros');
-    const data = await res.json();
-    proteinCount = data.protein;
-    fatsCount = data.fats;
-    carbsCount = data.carbs;
-    protein.textContent = proteinCount;
-    fats.textContent = fatsCount;
-    carbs.textContent = carbsCount;
-  } catch (e) {
-    proteinCount = 0;
-    fatsCount = 0;
-    carbsCount = 0;
-    protein.textContent = proteinCount;
-    fats.textContent = fatsCount;
-    carbs.textContent = carbsCount;
-  }
-}
-
-// save counts to backend
-async function saveCounts() {
-  await fetch('http://localhost:3000/api/macros', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      protein: proteinCount,
-      fats: fatsCount,
-      carbs: carbsCount
-    })
-  });
-}
+// load counts from localStorage or set to 0
+let proteinCount = parseInt(localStorage.getItem('protein')) || 0;
+let fatsCount = parseInt(localStorage.getItem('fats')) || 0;
+let carbsCount = parseInt(localStorage.getItem('carbs')) || 0;
 
 // show them on screen
 protein.textContent = proteinCount;
@@ -61,26 +28,24 @@ aors.addEventListener('click', () => {
   aors.textContent = isAddition ? '+ | -' : '- | +'; 
 });
 
-// update counts & save
-pbutton.addEventListener('click', async () => {
+// update counts & save to localStorage
+pbutton.addEventListener('click', () => {
   proteinCount += isAddition ? 1 : -1;
   if (proteinCount < 0) proteinCount = 0;
   protein.textContent = proteinCount;
-  await saveCounts();
+  localStorage.setItem('protein', proteinCount);
 });
 
-fbutton.addEventListener('click', async () => {
+fbutton.addEventListener('click', () => {
   fatsCount += isAddition ? 1 : -1;
   if (fatsCount < 0) fatsCount = 0;
   fats.textContent = fatsCount;
-  await saveCounts();
+  localStorage.setItem('fats', fatsCount);
 });
 
-cbutton.addEventListener('click', async () => {
+cbutton.addEventListener('click', () => {
   carbsCount += isAddition ? 1 : -1;
   if (carbsCount < 0) carbsCount = 0;
   carbs.textContent = carbsCount;
-  await saveCounts();
+  localStorage.setItem('carbs', carbsCount);
 });
-
-loadCounts();
