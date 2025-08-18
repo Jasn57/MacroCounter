@@ -11,7 +11,6 @@ A simple web app to track your daily protein, fats, and carbs intake.
 - HTML
 - CSS
 - JavaScript
-- Python (Flask) for the backend
 
 ## How to Use
 1. Click the **Protein**, **Fats**, or **Carbs** buttons to add macros.
