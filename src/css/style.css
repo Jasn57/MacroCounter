@@ -1,80 +1,72 @@
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg,#1e1e1e,#2a2a2a);
+  color: #f0f0f0;
+  padding: 20px;
 }
 
-/* title */
 h1 {
-    margin-bottom: 30px;
-    font-size: 2em;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg,#4da6ff,#ffa64d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* button container */
 .buttons {
-    display: flex;
-    gap: 20px; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
 .button-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,.05);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.3);
+  transition: transform .2s;
 }
+.button-row:hover { transform: translateY(-3px); }
 
-/* button colors */
-#pbutton {
-    background-color: #ff4d4d; /* red */
-}
-
-#fbutton {
-    background-color: #4dff4d; /* green */
-}
-
-#cbutton {
-    background-color: #4d4dff; /* blue */
-}
-
-#aors {
-    background-color: #ffb84d; /* orange */
-}
-
-/*  button styles */
 button {
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    color: white;
-    transition: filter 0.2s;
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  transition: transform .15s, filter .2s;
+}
+button:hover { filter: brightness(1.2); transform: scale(1.05); }
+
+#pbutton { background: linear-gradient(135deg,#ff4d4d,#b30000); }
+#fbutton { background: linear-gradient(135deg,#4dff4d,#00b300); }
+#cbutton { background: linear-gradient(135deg,#4da6ff,#003366); }
+#aors    { 
+  background: linear-gradient(135deg,#ffa64d,#b36b00);
+  margin-top: 20px; /* pushes it lower */
 }
 
-button:hover {
-    filter: brightness(1.2);
-}
-
-/* counters */
 span {
-    font-size: 1.5em;
-    text-align: center;
-}
-
-/* + - button container */
-.aors {
-    margin-top: 30px;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 10px;
 }
